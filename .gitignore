@@ -1,2 +1,5 @@
-build
+buil*
+
+höpömuutos, jotta saadaan pushaus fail
+
 gradle.properties
