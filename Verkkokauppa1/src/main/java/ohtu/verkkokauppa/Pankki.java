@@ -2,19 +2,10 @@ package ohtu.verkkokauppa;
 
 public class Pankki implements MaksuSovellus {
 
-    private static Pankki instanssi;
+    private TapahtumaMuisti kirjanpito;
 
-    public static Pankki getInstance() {
-        if (instanssi == null) {
-            instanssi = new Pankki();
-        }
-
-        return instanssi;
-    }
-    private Kirjanpito kirjanpito;
-
-    public Pankki() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Pankki(TapahtumaMuisti kirjanpito) {
+        this.kirjanpito = kirjanpito;
     }
 
     @Override
